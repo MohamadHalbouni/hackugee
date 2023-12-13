@@ -2,15 +2,13 @@ import bpy
 import subprocess
 
 
-
 def push_blendfile_to_github(dummy):
     
     # Get the project directory automatically
     project_directory = bpy.path.abspath("//")
 
     # Set the commit message
-    commit_message = "PushingFromBlender"
-    global commit_message  # Declare the variable as global to modify its value
+    #commit_message = "PushingFromBlender"
     
     # Get the current Blender file name
     blend_file_name = bpy.data.filepath.split("/")[-1]
@@ -21,7 +19,7 @@ def push_blendfile_to_github(dummy):
     # Add every file in the directory
     subprocess.run(["git", "-C", project_directory, "add", "."])
     # Commit
-    subprocess.run(["git", "-C", project_directory, "commit", "-m", commit_message ])
+    subprocess.run(["git", "-C", project_directory, "commit", "-m", "ThisIsBlender" ])
     # Push
     subprocess.run(["git", "-C", project_directory, "push"])
     
