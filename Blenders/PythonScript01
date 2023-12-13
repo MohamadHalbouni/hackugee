@@ -6,9 +6,6 @@ def push_blendfile_to_github(dummy):
     
     # Get the project directory automatically
     project_directory = bpy.path.abspath("//")
-
-    # Set the commit message
-    #commit_message = "PushingFromBlender"
     
     # Get the current Blender file name
     blend_file_name = bpy.data.filepath.split("/")[-1]
