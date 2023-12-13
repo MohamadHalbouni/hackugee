@@ -1,13 +1,15 @@
 import bpy
 import subprocess
 
-# Get the project directory automatically
-project_directory = bpy.path.abspath("//")
 
-# Set the commit message
-commit_message = "Pushing With PythonScript upon saving"
 
 def push_blendfile_to_github(dummy):
+    
+    # Get the project directory automatically
+    project_directory = bpy.path.abspath("//")
+
+    # Set the commit message
+    commit_message = "PushingFromBlender"
     global commit_message  # Declare the variable as global to modify its value
     
     # Get the current Blender file name
