@@ -8,17 +8,18 @@ project_directory = bpy.path.abspath("//")
 commit_message = "Pushing With PythonScript upon saving"
 
 def push_blendfile_to_github(dummy):
+    global commit_message  # Declare the variable as global to modify its value
     
     # Get the current Blender file name
     blend_file_name = bpy.data.filepath.split("/")[-1]
 
     # Add only the Blender file
-     subprocess.run(["git", "-C", project_directory, "add", blend_file_name])
+    #subprocess.run(["git", "-C", project_directory, "add", blend_file_name])
     
     # Add every file in the directory
-    #subprocess.run(["git", "-C", project_directory, "add", "."])
+    subprocess.run(["git", "-C", project_directory, "add", "."])
     # Commit
-    subprocess.run(["git", "-C", project_directory, "commit", "-m", commit_message])
+    subprocess.run(["git", "-C", project_directory, "commit", "-m", commit_message ])
     # Push
     subprocess.run(["git", "-C", project_directory, "push"])
     
