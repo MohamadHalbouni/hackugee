@@ -1,29 +1,17 @@
 import bpy
 import subprocess
-from datetime import date
-
-today = date.today()
 
 # Get the project directory automatically
 project_directory = bpy.path.abspath("//")
-print(bpy.data.scenes.keys())
-
     
 # Get the current Blender file name
 blend_file_name = bpy.data.filepath.split("/")[-1]
 
 # Commit Message
-with open(bpy.path.abspath("//documentaion"), 'r') as object :
-    lines = object.readlines()
-    
-    
-    commit_message = lines[-1] + today.strftime("%B %d, %Y")
-
+commit_message = "ThisIsBlender"
 
 
 def push_blendfile_to_github(dummy):
-    
-    
     
     # Add only the Blender file
     #subprocess.run(["git", "-C", project_directory, "add", blend_file_name])
