@@ -1,0 +1,4 @@
+Trying out to automaticly push the blender file to our github space when saving, it seems like it's working.
+we could further develop this into a plugin ;)
+
+there's a bug atm that makes me unable to change the commit messeage unless i close and open blender again.
